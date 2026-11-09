@@ -1,0 +1,351 @@
+﻿Transaction_ID,Transaction_Amount_INR,Transaction_Hour,Payment_Method,Transaction_Channel,Device_Status,Location_Type,Transactions_Last_Hour,Account_Age_Days,Fraud_Risk_Signal,Failed_OTP_Attempts,Previous_Disputes,Minutes_Since_Last_Transaction,Fraud_Label
+TXN001101,610.87,3,UPI,POS,New,International,2,980,22,0,0,127,Legitimate
+TXN001102,198.48,4,UPI,Mobile App,New,Domestic,0,802,52,0,0,97,Legitimate
+TXN001103,1227.6,17,UPI,Mobile App,Known,Domestic,1,1878,21,2,0,117,Legitimate
+TXN001104,1331.92,1,Card,POS,Known,International,2,728,,0,0,90,Legitimate
+TXN001105,1055.85,15,,POS,Known,International,2,542,88,1,0,170,Legitimate
+TXN001106,762.1,8,NetBanking,POS,Known,Domestic,2,1459,45,0,0,177,Legitimate
+TXN001107,315.17,20,Card,Web,Known,Domestic,2,135,14,0,1,33,Legitimate
+TXN001108,4094.18,20,Wallet,POS,Known,Domestic,4,1415,13,2,0,45,Legitimate
+TXN001109,1218.0,3,Wallet,Web,New,Domestic,2,337,59,0,0,149,Legitimate
+TXN001110,2044.1,1,UPI,Mobile App,Known,Domestic,6,1766,74,2,0,72,Legitimate
+TXN001111,540.34,22,Wallet,Web,Known,International,5,807,,0,0,76,Fraudulent
+TXN001112,96.23,5,UPI,POS,Known,International,2,1628,92,0,0,150,Legitimate
+TXN001113,280.72,17,Wallet,Mobile App,New,International,5,1282,3,0,0,162,Legitimate
+TXN001114,82.58,22,UPI,Web,Known,Domestic,5,971,40,1,0,14,Legitimate
+TXN001115,4529.22,21,Card,Mobile App,Known,Domestic,3,1346,17,0,0,116,Legitimate
+TXN001116,2792.39,7,NetBanking,POS,Known,International,6,843,54,0,1,157,Legitimate
+TXN001117,2709.54,15,UPI,Mobile App,Known,Domestic,3,1240,82,0,0,177,Legitimate
+TXN001118,252.43,15,Card,Web,Known,Domestic,1,1522,19,0,0,6,Legitimate
+TXN001119,944.56,15,UPI,POS,Known,Domestic,2,575,26,0,0,142,Legitimate
+TXN001120,1466.93,15,UPI,Mobile App,Known,Domestic,4,28,86,0,2,83,Legitimate
+TXN001121,283.73,20,UPI,Mobile App,New,Domestic,2,930,13,0,0,85,Legitimate
+TXN001122,631.34,17,Card,Web,Known,Domestic,5,1393,43,0,0,120,Legitimate
+TXN001123,1824.64,16,NetBanking,Mobile App,Known,International,1,1169,0,1,0,58,Legitimate
+TXN001124,307.22,13,UPI,POS,Known,Domestic,2,107,53,0,0,125,Legitimate
+TXN001125,295.26,16,UPI,POS,New,Domestic,4,1913,22,0,0,102,Legitimate
+TXN001126,2264.01,3,Wallet,Mobile App,,Domestic,3,1062,38,0,0,117,Legitimate
+TXN001127,216.92,13,,Mobile App,New,International,3,77,80,0,2,92,Legitimate
+TXN001128,830.09,10,Wallet,Web,New,International,8,1423,47,0,0,32,Legitimate
+TXN001129,186.61,5,UPI,POS,Known,Domestic,7,578,37,0,0,20,Legitimate
+TXN001130,454.79,14,UPI,POS,New,Domestic,2,269,43,1,0,88,Legitimate
+TXN001131,378.81,7,Card,POS,Known,Domestic,3,1314,23,1,0,22,Legitimate
+TXN001132,501.09,4,Card,Mobile App,New,International,5,1807,97,1,0,110,Legitimate
+TXN001133,622.56,23,Wallet,Web,New,International,2,1765,68,0,0,133,Legitimate
+TXN001134,-999,16,NetBanking,Web,Known,Domestic,,2143,9,0,0,128,Legitimate
+TXN001135,400.77,18,Card,Mobile App,Known,Domestic,5,1951,45,0,0,71,Legitimate
+TXN001136,952.78,7,Wallet,POS,Known,Domestic,1,777,68,0,0,67,Legitimate
+TXN001137,669.59,2,Card,POS,Known,Domestic,2,2084,36,1,0,151,Legitimate
+TXN001138,1117.32,14,NetBanking,Web,New,Domestic,1,133,60,0,0,171,Legitimate
+TXN001139,1444.99,23,UPI,Mobile App,Known,Domestic,8,14,50,1,0,139,Legitimate
+TXN001140,188.13,6,Card,Web,New,Domestic,0,890,22,1,0,107,Legitimate
+TXN001141,980.97,17,UPI,POS,Known,Domestic,5,2048,17,0,0,88,Legitimate
+TXN001142,415.47,16,Card,Web,Known,International,3,1159,47,0,0,10,Legitimate
+TXN001143,699.0,19,Card,Web,Known,Domestic,1,250,88,1,0,165,Legitimate
+TXN001144,2369.35,16,NetBanking,Mobile App,Known,Domestic,2,2499,70,0,1,157,Legitimate
+TXN001145,817.44,18,UPI,Web,New,Domestic,3,2056,52,0,1,89,Legitimate
+TXN001146,676.83,18,Card,Web,Known,Domestic,4,1154,31,4,0,166,Legitimate
+TXN001147,4842.9,13,NetBanking,Mobile App,Known,International,3,1663,73,0,0,76,Legitimate
+TXN001148,1467.81,7,NetBanking,POS,,Domestic,0,1058,72,0,0,120,Legitimate
+TXN001149,1699.82,7,UPI,Web,Known,Domestic,2,66,52,2,0,96,Legitimate
+TXN001150,1634.98,7,Card,Mobile App,Known,Domestic,0,1319,,0,0,102,Legitimate
+TXN001151,861.64,10,Card,Web,Known,Domestic,5,185,66,2,0,20,Legitimate
+TXN001152,371.77,8,UPI,Web,Known,Domestic,4,495,47,1,0,21,Legitimate
+TXN001153,3425.12,15,UPI,Mobile App,Known,Domestic,2,1780,29,1,0,165,Legitimate
+TXN001154,566.42,17,Card,Mobile App,Known,Domestic,1,2180,16,1,1,26,Legitimate
+TXN001155,3164.01,7,UPI,Mobile App,Known,Domestic,1,938,94,1,0,30,Legitimate
+TXN001156,5390.92,22,Card,Web,New,Domestic,3,2030,35,1,0,88,Legitimate
+TXN001157,1604.18,1,NetBanking,Web,Known,Domestic,3,375,46,0,2,161,Legitimate
+TXN001158,647.2,3,UPI,Mobile App,New,International,3,1377,58,1,0,90,Legitimate
+TXN001159,807.43,9,UPI,Mobile App,Known,Domestic,4,1934,43,1,0,101,Legitimate
+TXN001160,252.98,6,UPI,POS,Known,Domestic,2,1413,98,1,0,137,Legitimate
+TXN001161,1188.14,7,Wallet,POS,Known,Domestic,1,1158,10,1,0,73,Legitimate
+TXN001162,3748.94,21,Card,Mobile App,New,Domestic,3,354,,0,0,66,Legitimate
+TXN001163,1241.54,4,UPI,Web,Known,Domestic,3,847,89,0,0,15,Legitimate
+TXN001164,895.25,23,Card,POS,New,Domestic,1,641,11,0,0,114,Legitimate
+TXN001165,826.12,2,Wallet,Mobile App,New,Domestic,4,193,63,0,1,171,Legitimate
+TXN001166,423.6,11,UPI,Mobile App,Known,Domestic,6,1469,47,3,0,124,Legitimate
+TXN001167,814.95,20,Card,Mobile App,Known,Domestic,6,877,32,0,0,34,Legitimate
+TXN001168,765.56,16,UPI,Web,Known,Domestic,4,146,69,0,0,26,Legitimate
+TXN001169,789.41,1,Card,Mobile App,New,Domestic,4,1039,71,0,0,123,Legitimate
+TXN001170,490.32,2,UPI,Web,New,Domestic,4,2221,3,0,1,103,Legitimate
+TXN001171,1667.87,23,Wallet,Web,Known,International,1,605,50,0,1,10,Legitimate
+TXN001172,597.94,6,Wallet,Mobile App,Known,Domestic,4,796,1,0,0,117,Legitimate
+TXN001173,2824.22,3,UPI,Web,New,Domestic,1,1535,36,0,0,109,Legitimate
+TXN001174,242.32,6,UPI,Mobile App,Known,Domestic,5,1496,25,1,0,171,Legitimate
+TXN001175,725.06,18,Wallet,Web,New,International,2,901,5,0,2,174,Legitimate
+TXN001176,1458.61,10,Wallet,POS,New,Domestic,2,1198,58,1,0,26,Legitimate
+TXN001177,376.42,1,UPI,POS,Known,Domestic,3,2351,22,0,0,80,Legitimate
+TXN001178,622.41,5,UPI,Web,Known,Domestic,5,320,36,1,0,11,Legitimate
+TXN001179,,4,UPI,Mobile App,Known,Domestic,0,1978,16,2,0,65,Legitimate
+TXN001180,787.85,7,Card,Mobile App,New,Domestic,1,1078,66,0,0,135,Legitimate
+TXN001181,1168.3,12,Wallet,Mobile App,Known,Domestic,2,1573,82,1,0,167,Legitimate
+TXN001182,1578.25,4,NetBanking,Web,New,Domestic,0,797,88,3,0,17,Legitimate
+TXN001183,1045.11,20,Card,Web,Known,Domestic,3,200,22,0,0,177,Legitimate
+TXN001184,142.63,17,Wallet,Web,Known,Domestic,3,1054,50,0,0,125,Legitimate
+TXN001185,1353.02,22,UPI,Web,New,Domestic,3,1541,81,3,0,33,Legitimate
+TXN001186,514.61,15,Card,Mobile App,Known,Domestic,0,679,53,0,0,64,Legitimate
+TXN001187,1708.09,3,UPI,Web,New,International,3,990,46,0,0,78,Legitimate
+TXN001188,533.45,1,Card,POS,Known,Domestic,2,379,65,0,0,41,Legitimate
+TXN001189,549.32,13,NetBanking,Web,Known,Domestic,0,1406,95,1,0,142,Legitimate
+TXN001190,301.67,0,Card,POS,Known,International,3,2118,60,0,0,139,Legitimate
+TXN001191,340.64,4,NetBanking,Web,Known,Domestic,3,1144,0,1,0,80,Legitimate
+TXN001192,867.09,10,UPI,Mobile App,New,Domestic,3,1198,4,0,0,74,Legitimate
+TXN001193,313.31,20,UPI,Web,Known,Domestic,5,1273,81,0,0,114,Legitimate
+TXN001194,3173.44,5,Wallet,Mobile App,Known,Domestic,4,492,,0,0,176,Legitimate
+TXN001195,523.41,7,Card,Web,Known,International,7,680,78,3,0,128,Legitimate
+TXN001196,1049.09,11,Card,POS,Known,International,6,774,74,1,0,115,Legitimate
+TXN001197,1356.31,16,Wallet,POS,New,Domestic,4,1199,22,0,0,115,Legitimate
+TXN001198,3563.57,5,Wallet,POS,Known,Domestic,2,539,76,0,1,167,Legitimate
+TXN001199,1116.48,3,Wallet,POS,Known,Domestic,2,889,28,1,0,72,Legitimate
+TXN001200,1432.6,20,UPI,Web,New,Domestic,5,2163,64,0,1,128,Legitimate
+TXN001201,1165.68,9,Wallet,POS,New,Domestic,2,777,41,1,0,45,Legitimate
+TXN001202,1247.96,2,Card,Web,Known,Domestic,2,2251,4,1,0,62,Legitimate
+TXN001203,910.51,3,Card,POS,Known,Domestic,6,2401,31,0,0,70,Legitimate
+TXN001204,3570.98,21,Card,Web,Known,International,6,1859,63,0,0,4,Legitimate
+TXN001205,1524.12,20,Card,Web,Known,Domestic,,2091,9,2,0,112,Legitimate
+TXN001206,334.39,21,Card,Web,New,Domestic,2,2385,51,3,0,35,Legitimate
+TXN001207,557.57,15,UPI,POS,New,International,1,1739,73,2,1,61,Legitimate
+TXN001208,3127.45,12,UPI,POS,Known,International,3,1337,48,1,0,6,Legitimate
+TXN001209,135.87,5,Card,Web,New,International,2,190,77,0,1,4,Legitimate
+TXN001210,1902.65,7,UPI,Web,Known,Domestic,3,1886,86,0,0,109,Legitimate
+TXN001211,1598.78,12,UPI,Mobile App,Known,Domestic,2,1722,26,0,0,74,Legitimate
+TXN001212,613.95,16,NetBanking,Web,Known,Domestic,0,20,15,1,0,56,Legitimate
+TXN001213,1488.14,1,Card,Web,New,Domestic,,1056,80,0,0,123,Legitimate
+TXN001214,408.77,10,Wallet,Mobile App,Known,Domestic,2,2052,23,0,0,92,Legitimate
+TXN001215,942.89,1,NetBanking,POS,Known,Domestic,1,535,34,0,0,28,Legitimate
+TXN001216,1078.28,8,Card,POS,New,International,2,458,87,2,1,34,Legitimate
+TXN001217,799.34,12,NetBanking,Mobile App,Known,International,1,2489,51,0,0,86,Legitimate
+TXN001218,502.76,3,NetBanking,POS,New,Domestic,5,1532,16,0,0,161,Legitimate
+TXN001219,,13,Card,Web,Known,Domestic,2,373,10,0,0,56,Legitimate
+TXN001220,,19,Card,POS,Known,Domestic,3,723,14,0,0,5,Legitimate
+TXN001221,321.37,7,NetBanking,Web,New,Domestic,2,2159,28,2,0,153,Legitimate
+TXN001222,637.88,9,UPI,POS,Known,Domestic,3,372,0,0,0,7,Legitimate
+TXN001223,3412.9,14,NetBanking,Mobile App,New,Domestic,3,1393,79,1,0,110,Legitimate
+TXN001224,1381.06,0,Card,POS,New,International,3,2055,76,3,0,38,Legitimate
+TXN001225,389.25,3,UPI,POS,New,Domestic,2,1998,51,0,0,117,Legitimate
+TXN001226,847.15,8,Card,Web,Known,Domestic,1,554,26,2,0,110,Legitimate
+TXN001227,604.3,17,Card,POS,New,International,5,1226,41,2,0,4,Legitimate
+TXN001228,1186.21,11,,Web,Known,Domestic,4,2278,41,0,0,55,Legitimate
+TXN001229,879.24,15,Card,Web,New,Domestic,2,1614,49,0,0,9,Legitimate
+TXN001230,566.98,9,Card,POS,New,Domestic,1,1764,73,0,0,152,Legitimate
+TXN001231,436.2,13,Card,Web,New,Domestic,2,774,77,1,0,8,Legitimate
+TXN001232,85.84,5,UPI,POS,New,Domestic,1,2053,55,1,0,16,Legitimate
+TXN001233,1397.71,5,Card,Mobile App,New,Domestic,7,2251,73,0,0,18,Legitimate
+TXN001234,2824.3,13,NetBanking,Web,Known,Domestic,4,1357,30,0,0,9,Legitimate
+TXN001235,561.53,16,NetBanking,Web,New,Domestic,6,2229,100,1,1,130,Legitimate
+TXN001236,3803.87,21,UPI,Mobile App,New,Domestic,3,167,85,0,0,25,Legitimate
+TXN001237,3474.75,11,,Web,Known,Domestic,5,283,9,1,1,17,Legitimate
+TXN001238,2783.43,13,Wallet,Web,New,Domestic,1,2236,45,0,0,107,Legitimate
+TXN001239,1168.45,23,NetBanking,Web,New,Domestic,1,594,3,0,1,142,Legitimate
+TXN001240,1689.89,10,Card,Mobile App,Known,Domestic,1,1574,87,1,0,62,Legitimate
+TXN001241,1008.63,11,Card,POS,New,International,4,1107,29,1,0,55,Legitimate
+TXN001242,567.56,21,Card,Mobile App,Known,Domestic,4,1876,64,0,0,57,Legitimate
+TXN001243,1802.84,4,Card,Web,Known,Domestic,4,1864,71,1,2,139,Fraudulent
+TXN001244,753.06,15,UPI,Web,Known,Domestic,3,949,84,0,0,96,Legitimate
+TXN001245,1369.8,7,NetBanking,Mobile App,Known,Domestic,3,765,27,0,0,32,Legitimate
+TXN001246,369.33,19,Card,POS,Known,Domestic,3,490,84,0,1,51,Legitimate
+TXN001247,1128.65,12,UPI,Mobile App,,Domestic,3,514,49,1,1,159,Legitimate
+TXN001248,669.29,16,UPI,Web,Known,Domestic,0,111,58,0,0,151,Legitimate
+TXN001249,179.82,3,Wallet,Mobile App,Known,International,1,2489,68,0,0,10,Legitimate
+TXN001250,1879.0,15,Card,POS,Known,International,1,41,60,1,0,167,Legitimate
+TXN001251,438.92,15,UPI,Web,Known,Domestic,1,689,68,0,0,84,Legitimate
+TXN001252,532.55,10,Wallet,Mobile App,New,International,1,148,1,0,0,26,Legitimate
+TXN001253,2231.65,12,UPI,Mobile App,New,Domestic,1,745,64,0,0,142,Legitimate
+TXN001254,814.87,16,Card,Mobile App,Known,Domestic,2,985,99,0,0,82,Legitimate
+TXN001255,403.34,17,,Mobile App,Known,International,3,1814,50,1,1,132,Legitimate
+TXN001256,476.62,1,Card,Web,New,International,1,623,78,1,0,90,Legitimate
+TXN001257,863.55,9,UPI,Web,Known,Domestic,3,1200,19,0,1,159,Legitimate
+TXN001258,918.65,8,Card,Web,Known,Domestic,0,1994,70,0,0,153,Legitimate
+TXN001259,1397.24,10,Card,Mobile App,New,Domestic,4,2272,7,3,0,10,Legitimate
+TXN001260,230.27,4,UPI,POS,Known,Domestic,1,330,57,0,0,61,Legitimate
+TXN001261,493.94,4,Card,POS,Known,Domestic,0,913,75,0,1,99,Legitimate
+TXN001262,-999,23,Wallet,POS,New,Domestic,4,1006,100,0,0,34,Legitimate
+TXN001263,1024.37,11,Wallet,Web,New,Domestic,4,2254,22,3,0,174,Legitimate
+TXN001264,487.52,11,Wallet,Mobile App,,International,4,963,41,0,0,54,Legitimate
+TXN001265,2396.84,3,Card,Mobile App,Known,Domestic,1,136,27,0,0,41,Legitimate
+TXN001266,3394.26,3,UPI,POS,Known,Domestic,2,1376,33,0,0,157,Legitimate
+TXN001267,322.87,22,UPI,Web,New,Domestic,3,2135,40,0,0,40,Legitimate
+TXN001268,910.6,13,Wallet,Mobile App,New,Domestic,3,1760,28,1,0,92,Legitimate
+TXN001269,1581.4,0,UPI,POS,New,Domestic,5,621,25,0,0,178,Legitimate
+TXN001270,321.08,6,Card,POS,Known,International,4,471,38,0,0,17,Legitimate
+TXN001271,399.62,2,Card,Web,Known,Domestic,5,125,95,0,0,165,Legitimate
+TXN001272,232.72,2,UPI,Web,Known,Domestic,3,2300,70,0,2,59,Fraudulent
+TXN001273,284.3,17,UPI,Web,Known,Domestic,3,1623,63,0,0,101,Legitimate
+TXN001274,3447.41,0,Card,Web,New,Domestic,3,706,61,1,0,147,Legitimate
+TXN001275,1187.53,17,UPI,POS,Known,Domestic,3,1982,79,1,0,46,Legitimate
+TXN001276,894.02,8,Card,Mobile App,New,Domestic,2,217,62,1,0,108,Legitimate
+TXN001277,1528.13,23,UPI,Mobile App,Known,Domestic,2,2303,13,0,0,163,Legitimate
+TXN001278,2801.82,3,Card,Web,Known,Domestic,1,38,68,0,0,159,Legitimate
+TXN001279,3416.64,15,UPI,Web,Known,Domestic,3,2036,72,0,0,92,Legitimate
+TXN001280,2221.47,20,Card,Mobile App,,Domestic,0,2459,40,0,2,40,Legitimate
+TXN001281,730.53,11,Wallet,Web,Known,Domestic,5,171,35,1,0,112,Legitimate
+TXN001282,1632.03,8,Card,Mobile App,New,International,4,739,44,0,0,15,Legitimate
+TXN001283,1172.03,21,Card,Web,Known,Domestic,6,7,38,1,2,91,Legitimate
+TXN001284,575.1,6,UPI,Mobile App,Known,International,3,1916,95,0,0,159,Legitimate
+TXN001285,10131.03,20,NetBanking,Web,Known,International,1,1593,58,0,1,77,Legitimate
+TXN001286,1601.4,12,Card,Mobile App,New,Domestic,2,1590,,2,0,18,Legitimate
+TXN001287,701.63,18,NetBanking,POS,Known,International,7,1600,99,0,0,102,Legitimate
+TXN001288,1288.32,20,Card,Mobile App,New,Domestic,3,73,33,0,0,58,Legitimate
+TXN001289,2315.17,23,UPI,Mobile App,New,Domestic,1,2286,9,1,1,133,Legitimate
+TXN001290,1689.92,6,Card,Web,New,Domestic,9,17,8,0,1,115,Legitimate
+TXN001291,2564.81,20,Card,POS,New,Domestic,5,2066,98,0,0,106,Legitimate
+TXN001292,267.79,5,Card,Web,Known,Domestic,1,1186,80,0,0,8,Legitimate
+TXN001293,735.15,14,Wallet,Mobile App,New,Domestic,2,1315,16,0,0,20,Legitimate
+TXN001294,1572.9,8,Card,Mobile App,New,Domestic,2,521,15,0,0,59,Legitimate
+TXN001295,252.71,20,Card,POS,New,International,2,1356,76,0,1,124,Legitimate
+TXN001296,1174.4,4,Card,Mobile App,New,Domestic,4,102,5,1,0,132,Legitimate
+TXN001297,2210.22,8,Card,POS,Known,Domestic,5,232,10,2,0,31,Legitimate
+TXN001298,1274.16,9,Card,Mobile App,New,Domestic,2,2083,28,1,0,91,Legitimate
+TXN001299,159.32,17,UPI,Web,New,International,3,836,60,1,0,75,Legitimate
+TXN001300,1304.01,7,UPI,Mobile App,Known,Domestic,4,690,26,0,0,108,Legitimate
+TXN001301,1978.79,22,Card,POS,Known,Domestic,,2308,38,0,0,26,Legitimate
+TXN001302,479.55,4,UPI,Mobile App,Known,Domestic,1,1428,4,1,1,18,Legitimate
+TXN001303,961.9,0,UPI,Mobile App,New,International,1,1966,24,1,0,38,Legitimate
+TXN001304,1039.12,10,Card,Web,New,International,1,234,77,0,0,58,Legitimate
+TXN001305,459.27,17,NetBanking,Mobile App,New,Domestic,3,1999,62,0,0,75,Legitimate
+TXN001306,600.08,2,UPI,POS,New,International,1,1745,58,0,0,149,Fraudulent
+TXN001307,973.86,19,NetBanking,Mobile App,Known,Domestic,4,2232,51,0,0,145,Legitimate
+TXN001308,661.98,16,UPI,POS,Known,Domestic,2,2326,62,0,0,157,Legitimate
+TXN001309,403.83,16,Card,Mobile App,Known,Domestic,2,783,22,0,0,106,Legitimate
+TXN001310,673.02,11,Card,Mobile App,Known,Domestic,2,1901,46,2,2,48,Legitimate
+TXN001311,1601.74,15,Card,Mobile App,Known,Domestic,4,918,37,0,1,56,Legitimate
+TXN001312,1057.48,9,Wallet,Mobile App,Known,International,1,1093,53,1,0,31,Legitimate
+TXN001313,820.21,15,NetBanking,Web,Known,International,1,858,,0,0,128,Fraudulent
+TXN001314,740.97,9,NetBanking,Mobile App,Known,International,1,618,77,2,0,49,Legitimate
+TXN001315,,8,Card,POS,Known,Domestic,4,984,53,2,1,158,Legitimate
+TXN001316,668.21,1,Card,POS,New,Domestic,2,267,8,2,0,51,Legitimate
+TXN001317,478.01,6,Wallet,Mobile App,New,Domestic,2,205,92,1,0,129,Legitimate
+TXN001318,843.52,4,UPI,Web,Known,Domestic,3,2174,73,1,0,119,Legitimate
+TXN001319,415.32,0,UPI,Mobile App,Known,International,2,887,61,0,2,49,Legitimate
+TXN001320,564.8,6,NetBanking,POS,Known,Domestic,3,1980,55,0,0,86,Legitimate
+TXN001321,1359.27,15,UPI,POS,Known,Domestic,4,1386,82,0,0,99,Legitimate
+TXN001322,399.95,15,UPI,Web,New,Domestic,2,2072,63,1,0,65,Legitimate
+TXN001323,504.97,17,Wallet,Mobile App,Known,Domestic,5,2289,27,0,2,89,Legitimate
+TXN001324,848.29,23,Card,Web,New,Domestic,,589,34,1,0,58,Legitimate
+TXN001325,523.71,23,UPI,POS,Known,Domestic,4,449,70,0,0,125,Legitimate
+TXN001326,183.12,9,Card,POS,Known,Domestic,7,2166,3,1,0,50,Legitimate
+TXN001327,109.44,22,UPI,Web,Known,International,4,1691,50,0,1,134,Fraudulent
+TXN001328,251.85,18,Card,Mobile App,Known,Domestic,1,511,31,0,0,38,Legitimate
+TXN001329,1507.08,8,Card,Web,New,Domestic,4,202,90,0,0,6,Legitimate
+TXN001330,565.55,21,,Mobile App,New,International,3,2361,,1,0,131,Legitimate
+TXN001331,811.45,20,Card,Web,Known,Domestic,2,1456,77,1,1,117,Fraudulent
+TXN001332,1163.42,19,Card,POS,New,Domestic,10,410,81,1,0,39,Legitimate
+TXN001333,1830.57,8,Wallet,Web,Known,International,6,1461,78,0,1,117,Legitimate
+TXN001334,1756.65,20,UPI,Web,New,Domestic,5,1618,88,0,0,157,Legitimate
+TXN001335,758.83,23,Card,Web,New,Domestic,2,1914,100,0,0,110,Legitimate
+TXN001336,645.77,5,NetBanking,Mobile App,Known,Domestic,3,2069,28,0,0,94,Legitimate
+TXN001337,1751.56,4,NetBanking,Web,New,International,10,711,0,2,0,176,Legitimate
+TXN001338,1862.22,23,Wallet,Web,New,Domestic,2,511,83,0,0,46,Legitimate
+TXN001339,1283.51,16,UPI,Web,Known,International,2,547,55,1,0,178,Legitimate
+TXN001340,557.51,10,NetBanking,Web,New,International,,1303,65,1,0,65,Legitimate
+TXN001341,1855.6,19,NetBanking,POS,New,International,2,836,48,1,1,42,Legitimate
+TXN001342,417.14,20,Card,Mobile App,Known,Domestic,2,49,40,0,0,19,Legitimate
+TXN001343,831.78,7,Card,Mobile App,Known,Domestic,4,1526,11,1,0,32,Legitimate
+TXN001344,120.73,11,Card,Web,New,Domestic,4,2047,30,1,0,6,Legitimate
+TXN001345,929.59,15,Card,Web,New,Domestic,,1881,21,0,0,28,Fraudulent
+TXN001346,992.72,8,UPI,Web,New,Domestic,3,1789,6,0,0,39,Legitimate
+TXN001347,261.9,16,UPI,Web,Known,Domestic,3,70,70,0,0,21,Legitimate
+TXN001348,,14,Card,POS,New,Domestic,5,2472,55,0,0,127,Legitimate
+TXN001349,1480.87,5,Wallet,POS,New,Domestic,4,1847,11,1,0,11,Legitimate
+TXN001350,999.99,21,UPI,Web,New,International,5,1567,72,1,0,139,Legitimate
+TXN001351,180.36,2,Card,Mobile App,Known,Domestic,1,1826,8,1,0,17,Legitimate
+TXN001352,501.84,16,Card,POS,New,International,2,1047,74,1,1,19,Fraudulent
+TXN001353,1516.27,16,Card,POS,Known,Domestic,2,2187,27,1,0,83,Legitimate
+TXN001354,655.79,16,UPI,POS,,Domestic,3,115,9,0,0,117,Legitimate
+TXN001355,694.05,23,UPI,Web,New,Domestic,1,659,38,0,0,111,Legitimate
+TXN001356,1737.35,15,Card,Web,Known,Domestic,2,1520,1,1,1,71,Legitimate
+TXN001357,287.49,10,UPI,Web,Known,International,4,199,32,0,0,6,Legitimate
+TXN001358,507.39,8,Card,POS,,Domestic,5,1809,29,1,0,39,Legitimate
+TXN001359,412.18,18,Wallet,Mobile App,New,Domestic,3,712,97,0,0,145,Legitimate
+TXN001360,697.98,3,UPI,Web,New,Domestic,0,1345,30,0,0,157,Legitimate
+TXN001361,1315.45,17,UPI,Mobile App,New,International,,203,56,0,0,146,Legitimate
+TXN001362,540.44,12,UPI,Web,New,Domestic,2,34,91,0,0,7,Legitimate
+TXN001363,207.19,12,Card,Web,Known,Domestic,3,2115,7,2,0,7,Fraudulent
+TXN001364,392.95,8,Wallet,POS,New,Domestic,1,1223,72,2,1,67,Legitimate
+TXN001365,1502.64,19,Card,Mobile App,Known,Domestic,4,359,94,0,1,29,Legitimate
+TXN001366,1287.54,22,UPI,Mobile App,Known,International,2,1452,76,0,0,32,Legitimate
+TXN001367,728.73,16,Wallet,POS,Known,Domestic,1,428,59,0,0,29,Legitimate
+TXN001368,1429.26,1,Card,Web,Known,Domestic,1,2057,4,0,0,151,Legitimate
+TXN001369,3938.81,15,NetBanking,Web,Known,International,4,1423,34,0,0,6,Legitimate
+TXN001370,657.3,2,NetBanking,Web,New,International,1,1673,53,1,0,110,Legitimate
+TXN001371,700.18,1,NetBanking,Web,Known,Domestic,6,1519,96,2,0,17,Legitimate
+TXN001372,244.46,14,Card,Mobile App,Known,Domestic,1,2408,38,0,0,28,Legitimate
+TXN001373,2295.98,19,Card,Web,Known,Domestic,5,198,2,0,0,1,Legitimate
+TXN001374,1604.61,1,UPI,Web,Known,Domestic,9,566,6,0,0,85,Legitimate
+TXN001375,257.35,1,Wallet,Mobile App,New,Domestic,3,2496,88,0,0,95,Legitimate
+TXN001376,1030.16,13,,Mobile App,New,Domestic,1,2478,34,2,0,15,Legitimate
+TXN001377,1289.17,17,Card,Mobile App,New,International,3,138,67,0,0,47,Legitimate
+TXN001378,1022.89,9,NetBanking,Web,Known,Domestic,2,1508,46,0,0,26,Legitimate
+TXN001379,565.0,7,UPI,Mobile App,Known,Domestic,2,1591,49,1,2,2,Legitimate
+TXN001380,1209.88,8,Wallet,Web,New,Domestic,4,2256,22,1,1,77,Legitimate
+TXN001381,1219.62,22,Card,Mobile App,New,International,1,1476,3,0,0,171,Legitimate
+TXN001382,432.29,23,Card,Web,New,Domestic,2,1831,43,2,0,117,Legitimate
+TXN001383,995.79,12,Card,POS,Known,Domestic,2,956,29,1,0,99,Legitimate
+TXN001384,1140.78,3,UPI,Web,Known,Domestic,6,1119,49,1,0,147,Legitimate
+TXN001385,362.73,5,UPI,POS,Known,International,1,2370,67,0,1,136,Legitimate
+TXN001386,915.02,2,Card,Web,New,Domestic,1,445,69,0,1,126,Legitimate
+TXN001387,303.47,14,Wallet,POS,New,Domestic,2,48,99,0,0,6,Legitimate
+TXN001388,80.04,23,NetBanking,Mobile App,Known,Domestic,5,1923,83,0,0,38,Legitimate
+TXN001389,1265.23,5,Wallet,Mobile App,New,International,4,1945,99,0,0,65,Legitimate
+TXN001390,433.2,8,Card,POS,Known,Domestic,0,6,80,0,1,27,Legitimate
+TXN001391,1622.71,12,Card,Web,New,Domestic,5,1870,30,1,0,66,Legitimate
+TXN001392,748.58,18,Wallet,POS,Known,International,2,1094,64,0,1,60,Legitimate
+TXN001393,1849.86,1,Wallet,POS,New,Domestic,5,1586,76,1,0,114,Legitimate
+TXN001394,1305.14,23,Wallet,POS,Known,International,2,1337,42,0,0,70,Legitimate
+TXN001395,2382.64,16,UPI,POS,New,Domestic,1,2404,71,0,1,70,Legitimate
+TXN001396,1159.86,7,UPI,Web,Known,International,4,2461,50,0,0,129,Legitimate
+TXN001397,2123.47,23,UPI,POS,New,Domestic,4,270,98,0,0,36,Legitimate
+TXN001398,445.24,20,Wallet,Web,New,Domestic,5,1879,92,0,0,53,Legitimate
+TXN001399,523.89,9,UPI,POS,New,Domestic,4,329,13,1,0,90,Legitimate
+TXN001400,4737.01,16,NetBanking,Mobile App,New,International,3,838,79,1,0,160,Legitimate
+TXN001401,977.42,20,Wallet,Mobile App,Known,Domestic,0,2064,65,0,0,24,Legitimate
+TXN001402,468.29,19,Card,POS,New,Domestic,4,727,32,1,0,177,Legitimate
+TXN001403,1288.19,9,NetBanking,Web,Known,Domestic,1,1455,84,1,0,46,Legitimate
+TXN001404,176.13,9,UPI,Mobile App,Known,Domestic,3,1619,50,0,0,126,Legitimate
+TXN001405,185.89,23,Wallet,POS,Known,International,1,2461,95,0,0,158,Legitimate
+TXN001406,141.61,19,Card,Mobile App,New,Domestic,3,418,26,0,0,173,Legitimate
+TXN001407,1112.18,12,Card,Web,New,Domestic,5,538,0,2,0,155,Legitimate
+TXN001408,1881.35,6,Card,Mobile App,New,Domestic,3,701,0,1,0,87,Legitimate
+TXN001409,647.36,6,Wallet,POS,New,Domestic,5,2093,75,0,0,99,Legitimate
+TXN001410,1350.94,4,Card,Mobile App,Known,Domestic,4,742,10,1,0,94,Legitimate
+TXN001411,911.83,9,Card,Mobile App,New,Domestic,6,2319,65,1,1,119,Legitimate
+TXN001412,588.68,8,UPI,POS,New,International,3,141,83,0,0,121,Fraudulent
+TXN001413,137.4,7,UPI,Mobile App,Known,International,0,1446,32,0,0,141,Legitimate
+TXN001414,1327.62,15,Card,Web,Known,Domestic,3,2086,1,1,0,6,Legitimate
+TXN001415,1211.72,10,Wallet,Mobile App,Known,Domestic,4,682,1,0,0,175,Legitimate
+TXN001416,3462.78,4,UPI,Web,New,Domestic,1,894,92,0,0,154,Legitimate
+TXN001417,591.41,9,UPI,Web,Known,Domestic,7,151,89,0,0,21,Fraudulent
+TXN001418,4870.67,10,Card,Mobile App,New,International,6,2326,31,0,1,108,Legitimate
+TXN001419,447.6,2,Wallet,Web,New,Domestic,6,1244,4,0,0,76,Legitimate
+TXN001420,2076.95,3,Card,Web,New,Domestic,4,1332,100,2,0,7,Legitimate
+TXN001421,287.69,5,UPI,POS,,International,4,1069,77,0,0,81,Legitimate
+TXN001422,,8,Card,POS,New,International,2,661,35,1,0,157,Legitimate
+TXN001423,623.97,17,Card,Mobile App,Known,Domestic,5,449,22,0,0,171,Legitimate
+TXN001424,276.62,0,Card,POS,Known,Domestic,3,780,30,0,1,120,Legitimate
+TXN001425,502.85,14,Card,Web,Known,International,0,467,77,0,0,118,Legitimate
+TXN001426,1295.46,9,Card,Mobile App,Known,International,4,2029,68,1,0,117,Legitimate
+TXN001427,342.92,5,Card,Web,Known,Domestic,4,1768,29,1,0,27,Legitimate
+TXN001428,1260.12,1,UPI,POS,New,Domestic,1,2097,90,1,0,11,Legitimate
+TXN001429,397.29,11,NetBanking,Web,Known,Domestic,3,438,37,0,0,77,Legitimate
+TXN001430,188.44,4,UPI,Mobile App,Known,Domestic,2,620,15,0,1,88,Legitimate
+TXN001431,169.16,15,Card,Web,Known,Domestic,2,2357,9,5,0,171,Legitimate
+TXN001432,448.3,19,NetBanking,Mobile App,New,Domestic,1,2036,93,1,1,123,Legitimate
+TXN001433,696.4,0,Card,Mobile App,Known,Domestic,2,1881,28,0,1,129,Legitimate
+TXN001434,118.77,9,UPI,Web,New,Domestic,3,1281,3,0,1,2,Legitimate
+TXN001435,609.13,6,Card,Web,Known,Domestic,0,1713,58,1,1,178,Legitimate
+TXN001436,1704.25,23,Card,POS,Known,Domestic,1,1244,31,1,1,132,Legitimate
+TXN001437,248.61,21,NetBanking,POS,Known,Domestic,2,914,7,0,1,33,Legitimate
+TXN001438,274.3,23,UPI,POS,Known,Domestic,3,1252,12,0,0,82,Legitimate
+TXN001439,1041.5,1,Wallet,Mobile App,New,Domestic,5,2033,57,1,0,159,Legitimate
+TXN001440,1441.58,10,Card,Web,Known,International,3,2457,64,0,0,83,Legitimate
+TXN001441,697.37,21,,Mobile App,New,Domestic,1,2310,86,0,0,42,Legitimate
+TXN001442,511.42,21,NetBanking,Mobile App,Known,Domestic,4,2359,19,0,0,148,Legitimate
+TXN001443,242.3,2,Wallet,POS,New,International,5,528,72,0,0,78,Fraudulent
+TXN001444,,9,UPI,Web,Known,Domestic,5,212,9,1,0,173,Legitimate
+TXN001445,907.62,7,NetBanking,Web,New,Domestic,2,2470,64,0,0,57,Legitimate
+TXN001446,804.88,10,UPI,Mobile App,Known,International,1,2321,34,1,0,65,Legitimate
+TXN001447,531.06,5,Card,POS,Known,Domestic,1,2461,68,1,0,72,Legitimate
+TXN001448,957.18,1,Card,Web,New,Domestic,3,1004,6,0,0,2,Legitimate
+TXN001449,,11,Card,Web,New,Domestic,2,1718,71,0,1,65,Legitimate
+TXN001450,4077.79,2,Card,Web,Known,International,6,241,83,0,1,86,Legitimate

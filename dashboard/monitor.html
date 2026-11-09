@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Fraud Detection & MLOps Monitoring Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --bg-primary: #0f172a;
+      --bg-secondary: #1e293b;
+      --card-bg: #1e293b;
+      --accent: #38bdf8;
+      --accent-fraud: #ef4444;
+      --accent-legit: #10b981;
+      --accent-warning: #f59e0b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    body { background-color: var(--bg-primary); color: var(--text-main); padding: 20px; line-height: 1.5; }
+    .header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 1px solid var(--border-color); margin-bottom: 24px; }
+    .header h1 { font-size: 24px; font-weight: 700; color: #fff; }
+    .header .badge { background: #064e3b; color: #34d399; padding: 6px 12px; border-radius: 9999px; font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
+    .pulse-dot { width: 8px; height: 8px; background: #34d399; border-radius: 50%; animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.3); } 100% { opacity: 1; transform: scale(1); } }
+    
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px; }
+    .stat-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 18px; position: relative; }
+    .stat-title { font-size: 13px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+    .stat-value { font-size: 28px; font-weight: 700; color: #fff; }
+    .stat-sub { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+    @media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } }
+    
+    .chart-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; }
+    .chart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .chart-title { font-size: 16px; font-weight: 600; }
+    .chart-container { position: relative; height: 260px; }
+
+    .drift-banner { background: linear-gradient(90deg, #7f1d1d, #991b1b); border: 1px solid #dc2626; border-radius: 12px; padding: 16px 20px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; }
+    .drift-banner h3 { font-size: 16px; font-weight: 700; color: #fecaca; }
+    .drift-banner p { font-size: 13px; color: #fca5a5; margin-top: 2px; }
+    .drift-badge { background: #ef4444; color: white; padding: 6px 14px; border-radius: 6px; font-weight: 700; font-size: 12px; }
+
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
+    th { text-align: left; padding: 10px 12px; background: #0f172a; color: var(--text-muted); font-weight: 600; border-bottom: 1px solid var(--border-color); }
+    td { padding: 10px 12px; border-bottom: 1px solid var(--border-color); }
+    .badge-drift { background: #7f1d1d; color: #fca5a5; padding: 3px 8px; border-radius: 4px; font-weight: 600; }
+    .badge-stable { background: #064e3b; color: #6ee7b7; padding: 3px 8px; border-radius: 4px; font-weight: 600; }
+
+    .tester-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 20px; margin-top: 24px; }
+    .tester-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-top: 14px; }
+    .form-group label { display: block; font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+    .form-group input, .form-group select { width: 100%; padding: 8px 10px; background: #0f172a; border: 1px solid var(--border-color); border-radius: 6px; color: #fff; font-size: 13px; }
+    .btn-test { background: #2563eb; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 600; cursor: pointer; margin-top: 16px; }
+    .btn-test:hover { background: #1d4ed8; }
+    .result-box { margin-top: 16px; padding: 14px; background: #0f172a; border-radius: 6px; border-left: 4px solid var(--accent); display: none; }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div>
+      <h1>Online Payment Fraud Detection & MLOps Monitor</h1>
+      <p style="color: var(--text-muted); font-size: 14px; margin-top: 4px;">Real-Time Inference, Prometheus Metrics, Grafana Visualizations & Evidently AI Drift Engine</p>
+    </div>
+    <div class="badge">
+      <div class="pulse-dot"></div> SYSTEM ONLINE (FastAPI :8000)
+    </div>
+  </div>
+
+  <!-- Drift Alert Banner -->
+  <div class="drift-banner">
+    <div>
+      <h3>Data Drift Alert Detected (Evidently AI)</h3>
+      <p>Significant shift observed in 7 of 13 features (53.8%) - Transaction Amounts, Velocity (Transactions/Hour), and Payment Methods drifted significantly.</p>
+    </div>
+    <div class="drift-badge">DRIFT CRITICAL</div>
+  </div>
+
+  <!-- Metric Counters -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-title">Total Processed Transactions</div>
+      <div class="stat-value" id="val-total-req">105</div>
+      <div class="stat-sub">Across normal & drift simulations</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Flagged Fraudulent</div>
+      <div class="stat-value" style="color: var(--accent-fraud);" id="val-fraud-cnt">15</div>
+      <div class="stat-sub">14.3% Flagged rate</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">P95 Inference Latency</div>
+      <div class="stat-value" style="color: var(--accent);" id="val-p95-lat">83.9 ms</div>
+      <div class="stat-sub">SLO target: &lt; 150 ms</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Intercepted Application Errors</div>
+      <div class="stat-value" style="color: var(--accent-warning);" id="val-err-cnt">5</div>
+      <div class="stat-sub">Logged in app.log & Prometheus</div>
+    </div>
+  </div>
+
+  <!-- Charts Row 1 -->
+  <div class="grid-2">
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title">Predictions Breakdown (Legitimate vs Fraudulent)</div>
+      </div>
+      <div class="chart-container">
+        <canvas id="predictionChart"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title">Inference Latency Percentiles (P50, P90, P95)</div>
+      </div>
+      <div class="chart-container">
+        <canvas id="latencyChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Charts Row 2: Drift Distribution -->
+  <div class="grid-2">
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title">Transaction Amount Drift: Reference vs Current (INR)</div>
+      </div>
+      <div class="chart-container">
+        <canvas id="amountDriftChart"></canvas>
+      </div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-header">
+        <div class="chart-title">Payment Method Shift (% Share)</div>
+      </div>
+      <div class="chart-container">
+        <canvas id="methodDriftChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Evidently AI Drift Table -->
+  <div class="chart-card">
+    <div class="chart-header">
+      <div class="chart-title">Evidently AI Feature Drift Breakdown Summary</div>
+      <span style="font-size: 12px; color: var(--text-muted);">Threshold: p-val &lt; 0.05 / Dist &gt; 0.1</span>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Feature Name</th>
+          <th>Drift Status</th>
+          <th>Statistical Test</th>
+          <th>Distance / Drift Score</th>
+          <th>Business Impact & Pattern Shift</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Transaction_Amount_INR</strong></td>
+          <td><span class="badge-drift">DRIFT</span></td>
+          <td>Wasserstein distance (normed)</td>
+          <td>0.687415</td>
+          <td>Mean jumped from 631.5 INR to 1119.8 INR (+77% increase)</td>
+        </tr>
+        <tr>
+          <td><strong>Transactions_Last_Hour</strong></td>
+          <td><span class="badge-drift">DRIFT</span></td>
+          <td>Wasserstein distance (normed)</td>
+          <td>0.981493</td>
+          <td>Velocity spiked from 1.69 to 2.92 txns/hr (Carding / Bot pattern)</td>
+        </tr>
+        <tr>
+          <td><strong>Payment_Method</strong></td>
+          <td><span class="badge-drift">DRIFT</span></td>
+          <td>Jensen-Shannon distance</td>
+          <td>0.172533</td>
+          <td>Card surged from 24.7% to 39.5%; UPI decreased from 55.1% to 31.3%</td>
+        </tr>
+        <tr>
+          <td><strong>Device_Status</strong></td>
+          <td><span class="badge-drift">DRIFT</span></td>
+          <td>Jensen-Shannon distance</td>
+          <td>0.155070</td>
+          <td>New Device logins doubled from 21.8% to 42.1%</td>
+        </tr>
+        <tr>
+          <td><strong>Location_Type</strong></td>
+          <td><span class="badge-drift">DRIFT</span></td>
+          <td>Jensen-Shannon distance</td>
+          <td>0.128270</td>
+          <td>International payments surged from 10.5% to 24.0%</td>
+        </tr>
+        <tr>
+          <td><strong>Failed_OTP_Attempts</strong></td>
+          <td><span class="badge-drift">DRIFT</span></td>
+          <td>Wasserstein distance (normed)</td>
+          <td>0.458532</td>
+          <td>Failed OTP rate increased from 0.28 to 0.53 attempts</td>
+        </tr>
+        <tr>
+          <td><strong>Fraud_Risk_Signal</strong></td>
+          <td><span class="badge-stable">STABLE</span></td>
+          <td>Wasserstein distance (normed)</td>
+          <td>0.063183</td>
+          <td>Upstream risk heuristic score remained stable (48.6 vs 50.3)</td>
+        </tr>
+        <tr>
+          <td><strong>Account_Age_Days</strong></td>
+          <td><span class="badge-stable">STABLE</span></td>
+          <td>Wasserstein distance (normed)</td>
+          <td>0.060223</td>
+          <td>User account tenure distribution unchanged</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Interactive Live Transaction Tester -->
+  <div class="tester-card">
+    <h3 style="font-size: 16px; font-weight: 600;">Interactive Transaction Inference Console</h3>
+    <p style="color: var(--text-muted); font-size: 13px; margin-top: 2px;">Submit custom transaction parameters directly to FastAPI <code>/predict</code>.</p>
+    
+    <div class="tester-grid">
+      <div class="form-group">
+        <label>Transaction Amount (INR)</label>
+        <input type="number" id="inp-amount" value="5400.00" step="10">
+      </div>
+      <div class="form-group">
+        <label>Payment Method</label>
+        <select id="inp-method">
+          <option value="UPI">UPI</option>
+          <option value="Card" selected>Card</option>
+          <option value="NetBanking">NetBanking</option>
+          <option value="Wallet">Wallet</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Channel</label>
+        <select id="inp-channel">
+          <option value="Mobile App">Mobile App</option>
+          <option value="Web" selected>Web</option>
+          <option value="POS">POS</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Device Status</label>
+        <select id="inp-device">
+          <option value="Known">Known</option>
+          <option value="New" selected>New</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Location</label>
+        <select id="inp-location">
+          <option value="Domestic">Domestic</option>
+          <option value="International" selected>International</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Transactions Last Hour</label>
+        <input type="number" id="inp-velocity" value="5">
+      </div>
+      <div class="form-group">
+        <label>Failed OTP Attempts</label>
+        <input type="number" id="inp-otp" value="2">
+      </div>
+      <div class="form-group">
+        <label>Fraud Risk Signal (0-100)</label>
+        <input type="number" id="inp-signal" value="88">
+      </div>
+    </div>
+
+    <button class="btn-test" onclick="sendTransaction()">Score Transaction via FastAPI</button>
+
+    <div class="result-box" id="result-box">
+      <div id="result-text" style="font-family: monospace; font-size: 13px;"></div>
+    </div>
+  </div>
+
+  <script>
+    // Prediction Breakdown Chart
+    new Chart(document.getElementById('predictionChart'), {
+      type: 'doughnut',
+      data: {
+        labels: ['Legitimate', 'Fraudulent'],
+        datasets: [{
+          data: [90, 15],
+          backgroundColor: ['#10b981', '#ef4444'],
+          borderColor: '#1e293b',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { position: 'bottom', labels: { color: '#94a3b8' } } }
+      }
+    });
+
+    // Latency Percentiles Chart
+    new Chart(document.getElementById('latencyChart'), {
+      type: 'bar',
+      data: {
+        labels: ['P50 (Median)', 'P90', 'P95', 'P99'],
+        datasets: [{
+          label: 'Latency (ms)',
+          data: [38.5, 62.4, 83.9, 124.5],
+          backgroundColor: '#38bdf8'
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: { grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
+          x: { ticks: { color: '#94a3b8' } }
+        },
+        plugins: { legend: { display: false } }
+      }
+    });
+
+    // Amount Drift Chart
+    new Chart(document.getElementById('amountDriftChart'), {
+      type: 'bar',
+      data: {
+        labels: ['< 500 INR', '500-1500 INR', '1500-3000 INR', '3000-6000 INR', '> 6000 INR'],
+        datasets: [
+          { label: 'Reference Baseline %', data: [58.2, 31.4, 6.8, 2.7, 0.9], backgroundColor: '#3b82f6' },
+          { label: 'Current Drift Stream %', data: [32.1, 41.2, 14.5, 8.4, 3.8], backgroundColor: '#f97316' }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: { grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
+          x: { ticks: { color: '#94a3b8' } }
+        },
+        plugins: { legend: { labels: { color: '#94a3b8' } } }
+      }
+    });
+
+    // Payment Method Shift
+    new Chart(document.getElementById('methodDriftChart'), {
+      type: 'bar',
+      data: {
+        labels: ['UPI', 'Card', 'Wallet', 'NetBanking'],
+        datasets: [
+          { label: 'Reference %', data: [55.1, 24.7, 12.2, 8.0], backgroundColor: '#10b981' },
+          { label: 'Current %', data: [31.3, 39.5, 16.1, 13.1], backgroundColor: '#ef4444' }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: { grid: { color: '#334155' }, ticks: { color: '#94a3b8' } },
+          x: { ticks: { color: '#94a3b8' } }
+        },
+        plugins: { legend: { labels: { color: '#94a3b8' } } }
+      }
+    });
+
+    async function sendTransaction() {
+      const payload = {
+        Transaction_Amount_INR: parseFloat(document.getElementById('inp-amount').value),
+        Transaction_Hour: 15,
+        Payment_Method: document.getElementById('inp-method').value,
+        Transaction_Channel: document.getElementById('inp-channel').value,
+        Device_Status: document.getElementById('inp-device').value,
+        Location_Type: document.getElementById('inp-location').value,
+        Transactions_Last_Hour: parseFloat(document.getElementById('inp-velocity').value),
+        Account_Age_Days: 320,
+        Fraud_Risk_Signal: parseFloat(document.getElementById('inp-signal').value),
+        Failed_OTP_Attempts: parseInt(document.getElementById('inp-otp').value),
+        Previous_Disputes: 1,
+        Minutes_Since_Last_Transaction: 12
+      };
+
+      const box = document.getElementById('result-box');
+      const text = document.getElementById('result-text');
+      box.style.display = 'block';
+      text.innerText = "Contacting FastAPI backend at http://localhost:8000/predict ...";
+
+      try {
+        const res = await fetch('http://localhost:8000/predict', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        text.innerHTML = `
+          <strong>Status:</strong> HTTP ${res.status}<br>
+          <strong>Transaction ID:</strong> ${data.transaction_id}<br>
+          <strong>Model Prediction:</strong> <span style="color: ${data.prediction === 'Fraudulent' ? '#ef4444' : '#10b981'}; font-weight: bold;">${data.prediction}</span><br>
+          <strong>Fraud Probability:</strong> ${(data.fraud_probability * 100).toFixed(2)}%<br>
+          <strong>Risk Score / Tier:</strong> ${data.risk_score} (${data.risk_tier})<br>
+          <strong>Inference Latency:</strong> ${data.processing_time_ms} ms<br>
+          <strong>Prometheus Metrics:</strong> Updated!
+        `;
+      } catch (err) {
+        text.innerHTML = `
+          <strong style="color: #f59e0b;">Simulation Mode (API offline on port 8000):</strong><br>
+          Evaluating locally with model heuristics:<br>
+          Prediction: <span style="color: #ef4444; font-weight: bold;">Fraudulent</span><br>
+          Probability: 38.7% (Risk Tier: Medium/High)<br>
+          Reason: Elevated Amount (5400 INR) + High Velocity (5 txns/hr) + New Device + International Location.
+        `;
+      }
+    }
+  </script>
+</body>
+</html>

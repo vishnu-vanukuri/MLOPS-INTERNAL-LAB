@@ -1,0 +1,22 @@
+{
+    "baseline": {
+        "requests": 50,
+        "legitimate": 40,
+        "fraudulent": 10,
+        "fraud_rate_pct": 20.0,
+        "mean_latency_ms": 61.87,
+        "p95_latency_ms": 109.62
+    },
+    "drifted": {
+        "requests": 50,
+        "legitimate": 45,
+        "fraudulent": 5,
+        "fraud_rate_pct": 10.0,
+        "mean_latency_ms": 52.89,
+        "p95_latency_ms": 93.58
+    },
+    "errors": {
+        "tested": 5,
+        "handled": 5
+    }
+}

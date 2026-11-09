@@ -1,0 +1,20 @@
+{
+    "dataset_rows": 1100,
+    "train_rows": 880,
+    "test_rows": 220,
+    "fraud_support_test": 8,
+    "accuracy": 0.9363636363636364,
+    "roc_auc": 0.30247641509433965,
+    "pr_auc": 0.031873554879174704,
+    "precision_fraud": 0.0,
+    "recall_fraud": 0.0,
+    "f1_fraud": 0.0,
+    "f1_macro": 0.4835680751173709,
+    "decision_threshold": 0.5,
+    "confusion_matrix": {
+        "TN": 206,
+        "FP": 6,
+        "FN": 8,
+        "TP": 0
+    }
+}
